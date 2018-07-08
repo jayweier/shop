@@ -29,6 +29,8 @@ public class Test {
         System.out.println("改变后b：" + b.age);
         System.out.println("改变后a.getCompany：" + a.getCompany());// User.company
         System.out.println("改变后b.getCompany：" + b.getCompany());// User.company
+
+
     }
 
 }
