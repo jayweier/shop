@@ -2,11 +2,74 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>groupId</groupId>
+    <groupId>com.baidu</groupId>
     <artifactId>shop</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <spring.version>4.2.2.RELEASE</spring.version>
+
+        <mysql.version>5.1.29</mysql.version>
+        <mybatis.spring.version>1.2.3</mybatis.spring.version>
+        <mybatis.version>3.1.1</mybatis.version>
+        <commons-dbcp.version>1.4</commons-dbcp.version>
+
+        <jstl.version>1.2</jstl.version>
+        <servlet-api.version>3.1.0</servlet-api.version>
+
+
+        <log4j.version>1.2.17</log4j.version>
+
+        <commons-logging.version>1.2</commons-logging.version>
+        <commons-fileupload.version>1.2.1</commons-fileupload.version>
+        <commons-io.version>2.5</commons-io.version>
+        <commons-lang.version>3.6</commons-lang.version>
+
+        <testng.version>6.8.7</testng.version>
+
+        <file.encoding>UTF-8</file.encoding><!-- 编码格式 -->
+        <maven.compiler.plugin.version>3.5</maven.compiler.plugin.version><!-- 用于编译java代码 -->
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- 依赖的测试库 -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JDBC驱动程序的依赖类库 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <!-- java编译插件 -->
+            <!-- 指定编码格式，否则在DOS下运行mvn compile命令时会出现莫名的错误，因为系统默认使用GBK编码 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${file.encoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -17,7 +17,7 @@ public class JDBCTest {
         PreparedStatement ps = null;
         try {
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, 1);
+            ps.setInt(1, 3);
             ps.setString(2, "jie");
             ps.setString(3, "123");
             int result = ps.executeUpdate();
@@ -125,6 +125,10 @@ public class JDBCTest {
     }
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
+        JDBCTest a=new JDBCTest();
+        JDBCTest b=new JDBCTest();
+        a.insert();
+        b.delete();
     }
 
 }
