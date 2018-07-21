@@ -22,7 +22,7 @@ public class BaseTypeTest {
         System.out.println(d);
 
         // ****************浮点型**********************
-        float e = 18.22F;// 4个字节，默认double，科学计数法，1位符号，7位小数点前面的数，其余的位数表示小数点后面的数字
+        float e = 18.22F;// 4个字节，默认double，科学计数法，1位符号，7位代表小数点前面的数，其余的位数表示小数点后面的数字
         System.out.println(e);
 
         double f = 1.00;// 8个字节

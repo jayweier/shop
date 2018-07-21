@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var x=true;
+    var y=false;
+    document.write("布尔值:"+x);
+    document.write("<br>");
+    document.write("布尔值:"+y);
+</script>
+<hr/>
+<script>
+    var a=10; //十进制
+    var b=012;//第一位是0，表示八进制
+    var c=0xA;//0x开头表示十六进制
+    var d=3.14;//有小数点表示浮点数
+    var e=3.14e2;//使用e的幂表示科学计数法
+    document.write("十进制 10 的值: "+a);
+    document.write("<br>");
+    document.write("八进制 012 的值: "+b);
+    document.write("<br>");
+    document.write("十六进制 0xA 的值: "+c);
+    document.write("<br>");
+    document.write("浮点数 3.14 的值: "+d);
+    document.write("<br>");
+    document.write("科学记数法 3.14e2 的值: "+e);
+    document.write("<br>");
+</script>
+
+<hr/>
+<script>
+    var x='hello '; //单引号
+    var y="javascript"; //双引号
+    document.write("单引号的字符串:"+x);
+    document.write("<br>");
+    document.write("双引号的字符串:"+y);
+</script>
+
+<hr/>
+<script>
+    var x=10; //Number类型
+    document.write("此时 x的值是 "+x+" 类型是数字");
+    document.write("<br>");
+    x = "hello javascript"; //String类型
+    document.write("此时 x的值是 "+x+" 类型是字符串");
+</script>
+
+<hr/>
+<script>
+    var x;
+    document.write('声明了但是未赋值的时候，类型是： '+typeof x);
+    document.write("<br>");
+    x=5;
+    document.write('赋值为5之后，类型是： '+typeof x);
+    document.write("<br>");
+    x=5.1;
+    document.write('赋值为5.1之后，类型是： '+typeof x);
+    document.write("<br>");
+    x=true;
+    document.write('赋值为true之后，类型是： '+typeof x);
+    document.write("<br>");
+    x="hello";
+    document.write('赋值为hello之后，类型是： '+typeof x);
+
+</script>
+
+<hr/>
+<script>
+    var a="hello javascript";
+    document.write("变量a的类型是:"+(typeof a));
+    document.write("<br>");
+    document.write("变量a的长度是:"+a.length);
+</script>
+
+<hr/>
+<script>
+    function print(){
+        document.write("这一句话是由一个自定义函数打印");
+    }
+    print();
+</script>
+
+
+<hr/>
+<script>
+    function print(message){
+        document.write(message);
+    }
+    print("第一句话");
+    print("<br>");
+    print("第二句话");
+</script>
+
+<hr/>
+<script>
+    function print(message){
+        document.write(message);
+    }
+
+    function calc(x,y){
+        return x+y;
+    }
+
+    var sum = calc(500,20);
+    print(sum);
+
+</script>
+
+<hr/>
+<script>
+    function get(){
+        var value = document.getElementById("num1").value;
+        document.getElementById("result").value="从num1中取到的值:"+value;
+    }
+</script>
+
+<input type="text" id="num1" value="1">
+<br>
+<input type="text" id="result" value="">
+<br>
+<input type="button" value="取值" onclick="get()" >
+
+
+<hr/>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+    <script>
+        function add(){
+            var num1=document.getElementById("num1").value;
+            var num2=document.getElementById("num2").value;
+            document.getElementById("result").value=parseInt(num1)+parseInt(num2);
+        }
+    </script>
+</head>
+
+<style>
+    input{
+        width:50px;
+    }
+</style>
+<input type="text" id="num1"> +
+<input type="text" id="num2">=
+<input type="text" id="result">
+<input type="button" value="运算" onclick="add()">
+
+<hr/>
+<span>地名:</span> <input type="text" id ="location"  value="浙江">
+<span>公司类型:</span> <input type="text" id ="companyType"  value="互联网公司">
+<br>
+<span>公司名称:</span> <input type="text" id ="companyName" value="阿里九九">
+<span>老板姓名:</span> <input type="text" id ="bossName" value="牛风">
+<br>
+<span>money:</span> <input type="text" id ="money" value="一万">
+<span>产品:</span> <input type="text" id ="product" value="贴膜">
+<br>
+<span>价格计量单位:</span> <input type="text" id ="unit" value="百">
+
+<br>
+<div align="center">
+    <button id="generate" onclick="generate()">生成</button>
+    <br>
+    <textarea id="result">浙江最大互联网公司阿里九九倒闭了，王八蛋老板牛风吃喝嫖赌，欠下了一万个亿，带着他的小姨子跑了!我们没有办法，拿着贴膜抵工资!原价都是一百多、两百多、三百多的贴膜，现在全部只卖二十块，统统只要二十块!牛风王八蛋，你不是人!我们辛辛苦苦给你干了大半年，你不发工资，你还我血汗钱，还我血汗钱!</textarea>
+</div>
+
+<br>
+<script>
+    function generate(){
+        var location = $("location");
+        var companyType= $("companyType");
+        var companyName= $("companyName");
+        var bossName= $("bossName");
+        var money= $("money");
+        var product= $("product");
+        var unit= $("unit");
+
+        var result  = location +"最大"+companyType+companyName+"倒闭了，王八蛋老板"+bossName+"吃喝嫖赌，欠下了"+money+"个亿，"
+            + "带着他的小姨子跑了!我们没有办法，拿着"+product+"抵工资!原价都是一"+unit+"多、两"+unit+"多、三"+unit+"多的"+product+"，"
+            + "现在全部只卖二十块，统统只要二十块!"+bossName+"王八蛋，你不是人!我们辛辛苦苦给你干了大半年，"
+            + "你不发工资，你还我血汗钱，还我血汗钱!";
+
+        document.getElementById("result").value=result;
+
+    }
+
+    function $(id){
+        var value = document.getElementById(id).value;
+        return value;
+    }
+
+</script>
+
+<style>
+    body{
+        font-family: 宋体;
+    }
+    span{
+        display:inline-block;
+        border: 1px solid lightgray;
+        width:120px;
+        margin-bottom:5px;
+    }
+
+    button#generate{
+        width:80px;
+        height:30px;
+    }
+
+    textarea{
+        width:100%;
+        height:150px;
+        margin-top:20px;
+    }
+
+</style>
+<hr/>
+<script>
+
+    function f1(a){
+        document.write('参数的作用域在函数以内，其值是 '+a);//参数a的作用范围，所以打印出来是5；
+    }
+
+    function f2(){
+        document.write('在函数里不能访问其他函数的参数'+a); //不在参数a的作用范围，是一个未声明的变量，无法打印
+    }
+
+    f1(5);
+    f2();
+    document.write('在函数外也不能访问'+a);//也不在参数a的作用范围，是一个未声明的变量，无法打印
+
+</script>
+
+<hr/>
+<script>
+    var a = 0; //定义在函数前面，即全局变量，所有函数都可以访问
+
+    function f1(){
+        document.write('通过函数f1 设置全局变量a的值 为 5');
+        a = 5; //能够访问
+    }
+
+    function f2(){
+        document.write('通过函数f2 访问并打印全局变量a的值 '+a); //能够访问
+    }
+
+    f1(); //通过f1，设置a的值
+    document.write('<br>');
+    f2(); //通过f2,  打印a的值
+</script>
+
+<hr/>
+<script>
+    function showHello(){
+        alert("Hello JavaScript");
+    }
+</script>
+
+<button onclick="showHello()">点击一下</button>
+
+<hr/>
+<script>
+    function p(s){
+        document.write(s);
+        document.write("<br>");
+    }
+
+    p("1+2="+ (1+2));
+    p("5-3="+ (5-3));
+    p("3*2="+ (3*2));
+    p("9/3="+ (9/3));
+    p("10%3="+ (10%3));
+
+</script>
+
+<hr/>
+<script>
+
+    var a = 5;
+    document.write('a++ 是先取值，再运算，所以打印出来是：'+a++); //先取值 ，即5
+
+    document.write("<br>");
+    var b = 5;
+    document.write('++b 是先运算，再取值，所以打印出来是：'+ ++b); //先运算，再取值，即6
+
+</script>
+<hr/>
+<script>
+    x = 5;
+    x+= 6;
+    document.write('x+=6就是 x=x+6的意思，所以最后的值就等于: '+x);
+</script>
+<hr/>
+
+<hr/>
+
+
+<hr/>
+
+<hr/>
+
+</body>
+</html>

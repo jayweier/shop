@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+    <style>
+        /*元素选择器*/
+        p {
+            color: blue;
+        }
+
+        /*id选择器，一个元素的id应该是唯一的。另一个元素不应该重复使用*/
+        #p1 {
+            color: green;
+        }
+
+        /*类选择器，当需要多个元素，都使用同样的css的时候，就会使用类选择器*/
+        .pre{
+            color:fuchsia;
+        }
+
+        /*更准确的选择，同时根据元素名和class来选择*/
+        p.aaa{
+            color:#aaaaaa;
+        }
+    </style>
+</head>
+<body>
+<p>这是一个P</p>
+<p id="p1">这是一个P</p>
+<p class="pre">这是一个P</p>
+<p class="pre">这是一个P</p>
+<p class="aaa">这是一个P</p>
+
+<!--直接在某一个元素上增加style属性即可达到css一样的效果-->
+<p style="color:red">这是style为红色的</p>
+
+</body>
+</html>

@@ -67,7 +67,7 @@ public class Dog extends Animal {
 //        Animal animal = new Animal("aa", "bb");
 
 
-        // 现new外面的class才能new里面的class
+        // 先new外面的class才能new里面的class
         Dog.A dogA = a.new A(22);
 
         Dog.B dobB = new Dog.B(11);

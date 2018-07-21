@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<hr/>
+<input type="text">
+<hr/>
+<input type="text" size="10">
+
+<hr/>
+<input type="text" value="有初始值的文本框">
+
+<hr/>
+<input type="text" placeholder="请输入账号">
+
+<hr/>
+<input type="password">
+
+<hr/>
+<form action="http://how2j.cn/study/login.jsp">
+    账号：<input type="text" name="name"> <br/>
+    密码：<input type="password" name="password" > <br/>
+    <input type="submit" value="登陆">
+</form>
+
+<hr/>
+<form method="get" action="http://how2j.cn/study/login.jsp">
+    账号：<input type="text" name="name"> <br/>
+    密码：<input type="password" name="password" > <br/>
+    <input type="submit" value="登陆">
+</form>
+
+
+<hr/>
+<form method="post" action="http://how2j.cn/study/login.jsp">
+    账号：<input type="text" name="name"> <br/>
+    密码：<input type="password" name="password" > <br/>
+    <input type="submit" value="登陆">
+</form>
+
+<hr/>
+单选1 <input type="radio" >
+单选2 <input type="radio" >
+<br>
+默认选中 <input type="radio" checked="checked" >
+<hr/>
+<p>今天晚上做什么？</p>
+
+学习java<input type="radio" name="activity" value="学习java" > <br/>
+东京热<input type="radio" checked="checked"  name="activity" value="tokyohot" > <br/>
+dota<input type="radio" name="activity" value="dota" > <br/>
+LOL<input type="radio" name="activity"  value="lol"> <br/>
+
+<hr/>
+<p>今天晚上做什么？</p>
+
+学习java<input type="checkbox" value="学习java" > <br/>
+东京热<input type="checkbox" checked="checked"  name="activity" value="tokyohot" > <br/>
+dota<input type="checkbox" value="dota" > <br/>
+LOL<input type="checkbox" value="lol"> <br/>
+<hr/>
+<select >
+    <option >苍老师</option>
+    <option >高树玛利亚</option>
+    <option >遥美</option>
+</select>
+<br>
+<select  size="2">
+    <option >苍老师</option>
+    <option >高树玛利亚</option>
+    <option >遥美</option>
+</select>
+<br>
+<select size="3" multiple="multiple">
+    <option >苍老师</option>
+    <option >高树玛利亚</option>
+    <option >遥美</option>
+</select>
+<br>
+<select size="3" multiple="multiple">
+    <option >苍老师</option>
+    <option selected="selected">高树玛利亚</option>
+    <option selected="selected">遥美</option>
+</select>
+<hr/>
+<textarea>abc
+def文本框
+</textarea>
+<br>
+<textarea cols="30" rows="8">123456789012345678901234567890
+1234567890
+1234567890
+1234567890
+1234567890
+1234567890
+1234567890
+1234567890</textarea>
+试一下
+
+<hr/>
+<input type="button" value="一个按钮">
+
+
+普通按钮不能提交
+<form action="/study/login.jsp" method="get">
+    账号：<input type="text" name="name"> <br/>
+    密码：<input type="password" name="password" > <br/>
+    <input type="button" value="登陆">
+</form>
+<hr/>
+提交按钮
+<form action="/study/login.jsp" method="get">
+    账号：<input type="text" name="name"> <br/>
+    密码：<input type="password" name="password" > <br/>
+    <input type="submit" value="登陆">
+</form>
+<hr/>
+<form action="/study/login.jsp">
+    账号：<input type="text" name="name"> <br/>
+    密码：<input type="password" name="password" > <br/>
+    <input type="submit" value="提交">
+    <input type="reset" value="重置">
+</form>
+
+<hr/>
+<form action="/study/login.jsp">
+    账号：<input type="text" name="name"> <br/>
+    密码：<input type="password" name="password" > <br/>
+    <input type="image" src="http://how2j.cn/example.gif">
+</form>
+
+<hr/>
+<button>按钮</button>
+
+<button><img src="http://how2j.cn/example.gif"/></button>
+
+
+<hr/>
+<form action="/study/login.jsp">
+    账号：<input type="text" name="name"> <br/>
+    密码：<input type="password" name="password" > <br/>
+
+    <button type="submit">登陆</button>
+
+</form>
+<hr/>
+
+<hr/>
+
+<hr/>
+
+
+<hr/>
+</body>
+</html>
